@@ -21,7 +21,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App" style={{ width: "90%", margin: "0 auto" }}>
-        <div style={{ margin: "5% 0%", textAlign: 'left' }}>
+        <div style={{ margin: "5% 0%", textAlign: "left" }}>
           <h4>Blockchain.info API's</h4>
         </div>
         <ul className="nav nav-tabs" id="myTab" role="tablist">
@@ -35,7 +35,7 @@ class App extends React.Component {
               aria-controls="home"
               aria-selected="true"
             >
-            Raw Block
+              Single Block
             </a>
           </li>
           <li className="nav-item">
@@ -48,7 +48,7 @@ class App extends React.Component {
               aria-controls="profile"
               aria-selected="false"
             >
-            TX Block
+              Single TX
             </a>
           </li>
           <li className="nav-item">

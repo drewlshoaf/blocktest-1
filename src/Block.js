@@ -71,7 +71,7 @@ class App extends React.Component {
             <div className="row">
               <div className="col-md-4 col-sm-12">
                 <div style={{ textAlign: "left" }}>
-                  <h3>Raw Block</h3>
+                  <h3>Single Block</h3>
                 </div>
                 <ul className="list-group">
                   <li className="list-group-item d-flex justify-content-between align-items-center">
@@ -176,7 +176,8 @@ class App extends React.Component {
                 </div>
                 <table className="table">
                   <thead className="thead-dark">
-                    <tr><th scope="col">Hash</th>
+                    <tr>
+                      <th scope="col">Hash</th>
                       <th scope="col">Lock Time</th>
                       <th scope="col">Relayed By</th>
                       <th scope="col">Size</th>
@@ -185,13 +186,15 @@ class App extends React.Component {
                       <th scope="col">Ver</th>
                       <th scope="col">Vin SZ</th>
                       <th scope="col">Vout SZ</th>
-                      <th scope="col">Weight</th></tr>
+                      <th scope="col">Weight</th>
+                    </tr>
                   </thead>
                   {this.state.tx.length > 0 ? (
                     <tbody>
                       {this.state.tx.map((val, ind) => {
                         return (
-                          <tr key={ind}><th>
+                          <tr key={ind}>
+                            <th>
                               {val.hash.slice(0, 4) +
                                 "..." +
                                 val.hash.slice(
@@ -207,7 +210,8 @@ class App extends React.Component {
                             <td>{val.ver}</td>
                             <td>{val.vin_sz}</td>
                             <td>{val.vout_sz}</td>
-                            <td>{val.weight}</td></tr>
+                            <td>{val.weight}</td>
+                          </tr>
                         );
                       })}
                     </tbody>
